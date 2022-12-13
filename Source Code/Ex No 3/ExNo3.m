@@ -1,0 +1,16 @@
+clc;
+clear all;
+close all;
+a=imread('D:\BM2280 - Medical Image Processing Lab\BM2280 - Medical Images\ExNo3\CT_Lung_Axial Non_contrast_3a.jpg');
+figure;
+imshow(a);
+b=rgb2gray(a);
+a=histeq(b);
+subplot(2,2,1);
+imshow(a),title('Original Image');
+subplot(2,2,2);
+imshow(b),title('After histogram Equalization');
+subplot(2,2,3);
+imhist(a),title('Original Histogram');
+subplot(2,2,4);
+imshow(b),title('After Histogram Equalization');
